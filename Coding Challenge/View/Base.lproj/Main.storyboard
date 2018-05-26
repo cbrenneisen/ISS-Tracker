@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-3A-4QP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="time" rowHeight="109" id="qV1-Pe-bAf" customClass="ISSPassTimeCell" customModule="Coding_Challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qV1-Pe-bAf" id="AHy-jA-2VV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuJ-LI-JGM">
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Time: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-Y1-8Xs">
+                                                    <rect key="frame" x="15" y="28.333333333333336" width="384" height="69.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KJu-Y1-8Xs" firstAttribute="leading" secondItem="AHy-jA-2VV" secondAttribute="leadingMargin" id="bfq-ON-7xm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KJu-Y1-8Xs" secondAttribute="bottom" id="fmp-ip-05m"/>
+                                                <constraint firstItem="cuJ-LI-JGM" firstAttribute="leading" secondItem="AHy-jA-2VV" secondAttribute="leading" constant="15" id="hCS-aU-7WZ"/>
+                                                <constraint firstItem="KJu-Y1-8Xs" firstAttribute="top" secondItem="cuJ-LI-JGM" secondAttribute="bottom" constant="8" id="hES-kk-5nz"/>
+                                                <constraint firstItem="cuJ-LI-JGM" firstAttribute="top" secondItem="AHy-jA-2VV" secondAttribute="top" id="hMw-Xo-71N"/>
+                                                <constraint firstItem="KJu-Y1-8Xs" firstAttribute="trailing" secondItem="AHy-jA-2VV" secondAttribute="trailingMargin" id="pip-Pe-WnT"/>
+                                                <constraint firstAttribute="trailing" secondItem="cuJ-LI-JGM" secondAttribute="trailing" constant="15" id="vAS-AF-w6r"/>
+                                                <constraint firstItem="KJu-Y1-8Xs" firstAttribute="top" secondItem="cuJ-LI-JGM" secondAttribute="bottom" constant="8" id="vCg-RA-6Jt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="durationLabel" destination="cuJ-LI-JGM" id="QkA-hb-peo"/>
+                                            <outlet property="timeLabel" destination="KJu-Y1-8Xs" id="pG6-K0-MRU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qb0-3A-4QP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PtP-U5-cyI"/>
+                            <constraint firstItem="qb0-3A-4QP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WR1-DU-eHp"/>
+                            <constraint firstItem="qb0-3A-4QP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j5v-uI-f9j"/>
+                            <constraint firstItem="qb0-3A-4QP" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="tMo-a4-2he">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qb0-3A-4QP" id="oQE-Sf-o1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+</document>
